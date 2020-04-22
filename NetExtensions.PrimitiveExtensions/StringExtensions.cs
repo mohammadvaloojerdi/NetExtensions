@@ -23,5 +23,10 @@ namespace NetExtensions.PrimitiveExtensions
         {
             return !input.IsNullOrEmpty() && input.Any(char.IsUpper);
         }
+
+        public static bool ContainsDigit(this string input)
+        {
+            return !input.IsNullOrEmpty() && input.Any(char.IsDigit);
+        }
     }
 }
