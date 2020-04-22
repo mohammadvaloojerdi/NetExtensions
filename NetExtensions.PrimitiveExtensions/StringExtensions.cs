@@ -14,9 +14,14 @@ namespace NetExtensions.PrimitiveExtensions
             return string.IsNullOrEmpty(input);
         }
 
-        public static bool ContainsLowecaseLetter(this string input)
+        public static bool ContainsLowercaseLetter(this string input)
         {
             return !input.IsNullOrEmpty() && input.Any(char.IsLower);
+        }
+
+        public static bool ContainsUppercaseLetter(this string input)
+        {
+            return !input.IsNullOrEmpty() && input.Any(char.IsUpper);
         }
     }
 }
