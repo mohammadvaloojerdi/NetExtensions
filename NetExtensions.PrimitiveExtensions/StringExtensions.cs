@@ -6,5 +6,10 @@
         {
             return input != null && input.Equals(string.Empty);
         }
+
+        public static bool IsNullOrEmpty(this string input)
+        {
+            return string.IsNullOrEmpty(input);
+        }
     }
 }
