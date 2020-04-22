@@ -1,9 +1,9 @@
-﻿using FluentAssertions;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using FluentAssertions;
 using Xunit;
 
-namespace NetExtensions.PrimitiveExtensions.Tests.DateTimeTests
+namespace NetExtensions.PrimitiveExtensions.Tests.DateTimeExtensionsTests
 {
     public class DateTime_IsBeforeTests : BaseDateTimeTests
     {

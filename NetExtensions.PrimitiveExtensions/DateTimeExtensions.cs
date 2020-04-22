@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NetExtensions.PrimitiveExtensions.Exceptions;
+using System;
 
 namespace NetExtensions.PrimitiveExtensions
 {
@@ -22,6 +23,19 @@ namespace NetExtensions.PrimitiveExtensions
         public static bool IsInFuture(this DateTime dateTime, IClock clock)
         {
             return !dateTime.IsPast(clock);
+        }
+
+        public static int CalculateAge(this DateTime birthDate, IClock clock)
+        {
+            if (birthDate.IsInFuture(clock))
+                throw new InvalidBirthDateException();
+
+            var age = clock.Now().Year - birthDate.Year;
+
+            // Go back to the year the person was born in case of a leap year
+            if (birthDate.Date > clock.Now().AddYears(-age)) age--;
+
+            return age;
         }
     }
 }
