@@ -13,5 +13,10 @@ namespace NetExtensions.PrimitiveExtensions
         {
             return dateTime.Date == clock.Now().Date;
         }
+
+        public static bool IsBefore(this DateTime dateTime, DateTime dateTimeToCompare)
+        {
+            return dateTime < dateTimeToCompare;
+        }
     }
 }
