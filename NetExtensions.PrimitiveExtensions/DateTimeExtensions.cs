@@ -40,7 +40,12 @@ namespace NetExtensions.PrimitiveExtensions
 
         public static int PastHoursFromNow(this DateTime dateTime, IClock clock)
         {
-            return (int) (dateTime - clock.Now()).TotalHours;
+            return (int)(dateTime - clock.Now()).TotalHours;
+        }
+
+        public static int PastHoursFrom(this DateTime startDate, DateTime endDate)
+        {
+            return (int)(startDate - endDate).TotalHours;
         }
     }
 }
