@@ -3,17 +3,10 @@ using System;
 using System.Collections.Generic;
 using Xunit;
 
-namespace NetExtensions.PrimitiveExtensions.Tests
+namespace NetExtensions.PrimitiveExtensions.Tests.DateTimeTests
 {
-    public class DateTimeTests
+    public class DateTime_IsPastTests : BaseDateTimeTests
     {
-        private readonly ClockStub _clock;
-
-        public DateTimeTests()
-        {
-            _clock = new ClockStub();
-        }
-
         public static IEnumerable<object[]> PastDates => new List<object[]>
             {
                 new object[] { new DateTime(2010,10,10,09,59,00) },
@@ -23,11 +16,11 @@ namespace NetExtensions.PrimitiveExtensions.Tests
             };
 
         [Theory, MemberData(nameof(PastDates))]
-        public void IsPast_Should_Identify_Past_Dates(DateTime dateTime)
+        public void Should_Be_Able_To_Identify_Past_Dates(DateTime dateTime)
         {
-            _clock.Adjust(new DateTime(2010, 10, 10, 10, 00, 00));
+            Clock.Adjust(new DateTime(2010, 10, 10, 10, 00, 00));
 
-            var result = dateTime.IsPast(_clock);
+            var result = dateTime.IsPast(Clock);
 
             result.Should().BeTrue();
         }
@@ -42,11 +35,11 @@ namespace NetExtensions.PrimitiveExtensions.Tests
         };
 
         [Theory, MemberData(nameof(FutureDates))]
-        public void IsPast_Should_Identify_Future_Dates(DateTime dateTime)
+        public void Should_Be_Able_To_Identify_Future_Dates(DateTime dateTime)
         {
-            _clock.Adjust(new DateTime(2010, 10, 10, 10, 00, 00));
+            Clock.Adjust(new DateTime(2010, 10, 10, 10, 00, 00));
 
-            var result = dateTime.IsPast(_clock);
+            var result = dateTime.IsPast(Clock);
 
             result.Should().BeFalse();
         }

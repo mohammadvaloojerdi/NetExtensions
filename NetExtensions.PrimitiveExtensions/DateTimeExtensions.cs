@@ -8,5 +8,10 @@ namespace NetExtensions.PrimitiveExtensions
         {
             return dateTime < clock.Now();
         }
+
+        public static bool IsToday(this DateTime dateTime, IClock clock)
+        {
+            return dateTime.Date == clock.Now().Date;
+        }
     }
 }
