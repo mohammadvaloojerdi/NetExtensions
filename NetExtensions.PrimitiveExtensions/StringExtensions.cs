@@ -38,5 +38,10 @@ namespace NetExtensions.PrimitiveExtensions
         {
             return input.IsNotNullOrEmpty() && input.All(char.IsNumber);
         }
+
+        public static bool ContainsDuplicateCharacktar(this string input)
+        {
+            return input.IsNotNullOrEmpty() && input.GroupBy(x => x).Any(x => x.Count() > 1);
+        }
     }
 }
