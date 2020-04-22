@@ -12,4 +12,14 @@
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\NetExtensions.PrimitiveExtensions\NetExtensions.PrimitiveExtensions.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="FluentAssertions">
+      <HintPath>C:\Users\Arsalan\.nuget\packages\fluentassertions\5.10.3\lib\netstandard2.0\FluentAssertions.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

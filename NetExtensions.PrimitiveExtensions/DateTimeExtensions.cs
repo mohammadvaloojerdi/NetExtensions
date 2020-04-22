@@ -18,5 +18,10 @@ namespace NetExtensions.PrimitiveExtensions
         {
             return dateTime < dateTimeToCompare;
         }
+
+        public static bool IsInFuture(this DateTime dateTime, IClock clock)
+        {
+            return !dateTime.IsPast(clock);
+        }
     }
 }
