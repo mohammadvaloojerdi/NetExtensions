@@ -1,0 +1,20 @@
+﻿using System;
+
+namespace NetExtensions.PrimitiveExtensions.Tests
+{
+    public class ClockStub : IClock
+    {
+        private DateTime? _dateTime;
+
+        public void Adjust(DateTime dateTime)
+        {
+            this._dateTime = dateTime;
+        }
+
+        /// <inheritdoc />
+        public DateTime Now()
+        {
+            return _dateTime ?? DateTime.Now;
+        }
+    }
+}
