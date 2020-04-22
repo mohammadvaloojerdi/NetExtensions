@@ -37,5 +37,10 @@ namespace NetExtensions.PrimitiveExtensions
 
             return age;
         }
+
+        public static int PastHoursFromNow(this DateTime dateTime, IClock clock)
+        {
+            return (int) (dateTime - clock.Now()).TotalHours;
+        }
     }
 }
