@@ -9,6 +9,8 @@ namespace NetExtensions.PrimitiveExtensions.Tests.ObjectExtensions
         public static Customer CreateNull() => null;
     }
 
+    internal class VipCustomer : Customer { }
+
     internal class Order
     {
         public static Order CreateNull() => null;
@@ -59,6 +61,16 @@ namespace NetExtensions.PrimitiveExtensions.Tests.ObjectExtensions
             var result = obj.IsNotNull();
 
             result.Should().BeFalse();
+        }
+
+        [Fact]
+        public void Is_Should_Return_True_On_Objects_Derived_From_Specific_Types()
+        {
+            var vipCustomer = new VipCustomer();
+
+            var result = vipCustomer.Is<Customer>();
+
+            result.Should().BeTrue();
         }
     }
 }

@@ -11,5 +11,10 @@
         {
             return !obj.IsNull();
         }
+
+        public static bool Is<T>(this object obj)
+        {
+            return obj is T;
+        }
     }
 }
