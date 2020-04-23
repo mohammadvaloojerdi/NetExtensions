@@ -14,7 +14,7 @@ namespace NetExtensions.PrimitiveExtensions
                     !type.IsInterface && !type.IsAbstract && type != typeof(T) && typeof(T).IsAssignableFrom(type));
         }
 
-        public static IEnumerable<Type> GetSubClassesOf<T>(this Assembly assembly)
+        public static IEnumerable<Type> GetSubClassesOf<T>(this Assembly assembly) where T : class
         {
             return assembly.GetTypes().Where(type => !type.IsAbstract && type.IsSubclassOf(typeof(T)));
         }
