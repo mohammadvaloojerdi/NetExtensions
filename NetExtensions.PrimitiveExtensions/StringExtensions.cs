@@ -53,5 +53,10 @@ namespace NetExtensions.PrimitiveExtensions
         {
             return input.IsNotNullOrEmpty() && input.Contains(" ");
         }
+
+        public static bool ContainsSeperator(this string input, char seperator)
+        {
+            return input.Contains(seperator) && input.Split(seperator).Any();
+        }
     }
 }
