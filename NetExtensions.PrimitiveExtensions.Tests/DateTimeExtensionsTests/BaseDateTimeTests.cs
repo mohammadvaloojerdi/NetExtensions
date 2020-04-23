@@ -1,4 +1,4 @@
-﻿namespace NetExtensions.PrimitiveExtensions.Tests.DateTimeExtensionsTests
+﻿namespace NetExtensions.ExtensionMethods.Tests.DateTimeExtensionsTests
 {
     public class BaseDateTimeTests
     {

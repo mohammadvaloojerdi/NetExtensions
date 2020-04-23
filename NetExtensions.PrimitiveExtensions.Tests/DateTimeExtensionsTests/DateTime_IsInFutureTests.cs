@@ -1,9 +1,9 @@
-﻿using FluentAssertions;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using FluentAssertions;
 using Xunit;
 
-namespace NetExtensions.PrimitiveExtensions.Tests.DateTimeExtensionsTests
+namespace NetExtensions.ExtensionMethods.Tests.DateTimeExtensionsTests
 {
     public class DateTime_IsInFutureTests : BaseDateTimeTests
     {
@@ -27,14 +27,14 @@ namespace NetExtensions.PrimitiveExtensions.Tests.DateTimeExtensionsTests
             result.Should().BeTrue();
         }
 
-        public static IEnumerable<object[]> PasDates => new List<object[]>
+        public static IEnumerable<object[]> PastDates => new List<object[]>
         {
             new object[]{new DateTime(2010,01,01,09,59,59) },
             new object[]{new DateTime(2010,01,01,09,59,00) },
             new object[]{new DateTime(2009,01,01,09,00,00) }
         };
 
-        [Theory, MemberData(nameof(PasDates))]
+        [Theory, MemberData(nameof(PastDates))]
         public void Should_Return_False_On_Past_Dates(DateTime dateTime)
         {
             Clock.Adjust(new DateTime(2010, 01, 01, 10, 00, 00));

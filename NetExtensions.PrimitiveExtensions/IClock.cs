@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NetExtensions.PrimitiveExtensions
+namespace NetExtensions.ExtensionMethods
 {
     public interface IClock
     {

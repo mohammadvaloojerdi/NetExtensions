@@ -1,8 +1,8 @@
-﻿using FluentAssertions;
-using System;
+﻿using System;
+using FluentAssertions;
 using Xunit;
 
-namespace NetExtensions.PrimitiveExtensions.Tests.NumberExtensions
+namespace NetExtensions.ExtensionMethods.Tests.NumberExtensions
 {
     public abstract class NumberExtensions<T> where T : struct, IComparable, IComparable<T>, IConvertible
     {

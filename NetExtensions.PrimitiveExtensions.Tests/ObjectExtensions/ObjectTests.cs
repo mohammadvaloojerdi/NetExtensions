@@ -1,8 +1,8 @@
-﻿using FluentAssertions;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using FluentAssertions;
 using Xunit;
 
-namespace NetExtensions.PrimitiveExtensions.Tests.ObjectExtensions
+namespace NetExtensions.ExtensionMethods.Tests.ObjectExtensions
 {
     internal class Customer
     {

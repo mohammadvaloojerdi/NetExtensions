@@ -1,4 +1,4 @@
-﻿namespace NetExtensions.PrimitiveExtensions
+﻿namespace NetExtensions.ExtensionMethods
 {
     public static class ObjectExtensions
     {

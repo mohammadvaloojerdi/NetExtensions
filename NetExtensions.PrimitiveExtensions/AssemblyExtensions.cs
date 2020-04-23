@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
-namespace NetExtensions.PrimitiveExtensions
+namespace NetExtensions.ExtensionMethods
 {
     public static class AssemblyExtensions
     {

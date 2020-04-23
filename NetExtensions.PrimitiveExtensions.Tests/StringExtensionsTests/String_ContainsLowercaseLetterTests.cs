@@ -1,9 +1,9 @@
 ﻿using FluentAssertions;
 using Xunit;
 
-namespace NetExtensions.PrimitiveExtensions.Tests.StringExtensionsTests
+namespace NetExtensions.ExtensionMethods.Tests.StringExtensionsTests
 {
-    public class String_ContainsLowecaseLetterTests
+    public class String_ContainsLowercaseLetterTests
     {
         [Theory]
         [InlineData("a")]

@@ -1,10 +1,10 @@
-﻿using FluentAssertions;
-using NetExtensions.PrimitiveExtensions.Exceptions;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using FluentAssertions;
+using NetExtensions.ExtensionMethods.Exceptions;
 using Xunit;
 
-namespace NetExtensions.PrimitiveExtensions.Tests.DateTimeExtensionsTests
+namespace NetExtensions.ExtensionMethods.Tests.DateTimeExtensionsTests
 {
     public class DateTime_CalculateAgeTests : BaseDateTimeTests
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NetExtensions.PrimitiveExtensions.Tests.DateTimeExtensionsTests
+namespace NetExtensions.ExtensionMethods.Tests.DateTimeExtensionsTests
 {
     public class ClockStub : IClock
     {

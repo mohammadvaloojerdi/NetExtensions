@@ -1,10 +1,10 @@
-﻿using FluentAssertions;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Reflection;
+using FluentAssertions;
 using Xunit;
 
-namespace NetExtensions.PrimitiveExtensions.Tests.AssemblyExtensions
+namespace NetExtensions.ExtensionMethods.Tests.AssemblyExtensions
 {
     public class Assembly_GetSubClassesOfTests
     {

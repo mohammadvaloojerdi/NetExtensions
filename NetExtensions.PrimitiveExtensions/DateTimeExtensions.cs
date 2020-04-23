@@ -1,7 +1,7 @@
-﻿using NetExtensions.PrimitiveExtensions.Exceptions;
-using System;
+﻿using System;
+using NetExtensions.ExtensionMethods.Exceptions;
 
-namespace NetExtensions.PrimitiveExtensions
+namespace NetExtensions.ExtensionMethods
 {
     public static class DateTimeExtensions
     {

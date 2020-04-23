@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 
-namespace NetExtensions.PrimitiveExtensions
+namespace NetExtensions.ExtensionMethods
 {
     public static class StringExtensions
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NetExtensions.PrimitiveExtensions.Exceptions
+namespace NetExtensions.ExtensionMethods.Exceptions
 {
     public class InvalidBirthDateException : Exception
     {

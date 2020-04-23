@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NetExtensions.PrimitiveExtensions.Tests.NumberExtensions
+namespace NetExtensions.ExtensionMethods.Tests.NumberExtensions
 {
     public class DoubleExtensions : NumberExtensions<double>
     {

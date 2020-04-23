@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NetExtensions.PrimitiveExtensions
+namespace NetExtensions.ExtensionMethods
 {
     // TODO : Find Better Way Than Convert.ToInt32(number);
     public static class NumberExtensions
