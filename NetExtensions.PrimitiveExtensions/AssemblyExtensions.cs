@@ -13,5 +13,10 @@ namespace NetExtensions.PrimitiveExtensions
                 .Where(type =>
                     !type.IsInterface && !type.IsAbstract && type != typeof(T) && typeof(T).IsAssignableFrom(type));
         }
+
+        public static IEnumerable<Type> GetSubClassesOf<T>(this Assembly assembly)
+        {
+            return assembly.GetTypes().Where(type => !type.IsAbstract && type.IsSubclassOf(typeof(T)));
+        }
     }
 }

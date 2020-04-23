@@ -8,11 +8,11 @@ namespace NetExtensions.PrimitiveExtensions.Tests.AssemblyExtensions
 {
     public class Assembly_GetClassessThatImplementsTests
     {
-        public interface IRepository { }
-        public abstract class Repository : IRepository { }
-        public class CustomerRepository : IRepository { }
-        public class VipCustomerRepository : CustomerRepository { }
-        public class OrderRepository : IRepository { }
+        internal interface IRepository { }
+        internal abstract class Repository : IRepository { }
+        internal class CustomerRepository : IRepository { }
+        internal class VipCustomerRepository : CustomerRepository { }
+        internal class OrderRepository : IRepository { }
 
         [Fact]
         public void Should_Return_Classess_That_Implement_Specific_Interface()
