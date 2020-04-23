@@ -4,29 +4,62 @@ using Xunit;
 
 namespace NetExtensions.PrimitiveExtensions.Tests.NumberExtensions
 {
-    public abstract class NumberExtensions<T> where T : struct, IComparable, IComparable<T>,
-        IConvertible, IEquatable<T>, IFormattable
+    public abstract class NumberExtensions<T> where T : struct, IComparable, IComparable<T>, IConvertible
     {
         [Theory]
-        [InlineData(1)]
-        [InlineData(3)]
-        [InlineData(5)]
-        public void IsOdd_Should_Return_True_On_Odd_Numbers(object number)
+        [InlineData(1, true)]
+        [InlineData(3, true)]
+        [InlineData(5, true)]
+        [InlineData(2, false)]
+        [InlineData(4, false)]
+        [InlineData(6, false)]
+        public void IsOdd_Should_Be_Able_To_Identify_Odd_Numbers(object number, bool expected)
         {
             var result = CastNumberToT(number).IsOdd();
 
-            result.Should().BeTrue();
+            result.Should().Be(expected);
         }
 
         [Theory]
-        [InlineData(2)]
-        [InlineData(4)]
-        [InlineData(6)]
-        public void IsOdd_Should_Return_False_On_Even_Numbers(object number)
+        [InlineData(2, true)]
+        [InlineData(4, true)]
+        [InlineData(6, true)]
+        [InlineData(1, false)]
+        [InlineData(3, false)]
+        [InlineData(5, false)]
+        public void IsEven_Should_Be_Able_To_Identify_Even_Numbers(object number, bool expected)
         {
-            var result = CastNumberToT(number).IsOdd();
+            var result = CastNumberToT(number).IsEven();
 
-            result.Should().BeFalse();
+            result.Should().Be(expected);
+        }
+
+        [Theory]
+        [InlineData(0, true)]
+        [InlineData(1, true)]
+        [InlineData(2, true)]
+        [InlineData(-1, false)]
+        [InlineData(-2, false)]
+        [InlineData(-3, false)]
+        public void IsPositive_Should_Be_Able_To_Identify_Positive_Numbers(object number, bool expected)
+        {
+            var result = CastNumberToT(number).IsPositive();
+
+            result.Should().Be(expected);
+        }
+
+        [Theory]
+        [InlineData(-1, true)]
+        [InlineData(-2, true)]
+        [InlineData(-3, true)]
+        [InlineData(0, false)]
+        [InlineData(1, false)]
+        [InlineData(2, false)]
+        public void IsNegative_Should_Be_Able_To_Identify_Positive_Numbers(object number, bool expected)
+        {
+            var result = CastNumberToT(number).IsNegative();
+
+            result.Should().Be(expected);
         }
 
         public abstract T CastNumberToT(object number);
