@@ -48,5 +48,10 @@ namespace NetExtensions.PrimitiveExtensions
         {
             return input.IsNotNullOrEmpty() && input.GroupBy(x => x).Any(x => x.Key == characktar && x.Count() > 1);
         }
+
+        public static bool ContainsWhiteSpace(this string input)
+        {
+            return input.IsNotNullOrEmpty() && input.Contains(" ");
+        }
     }
 }
