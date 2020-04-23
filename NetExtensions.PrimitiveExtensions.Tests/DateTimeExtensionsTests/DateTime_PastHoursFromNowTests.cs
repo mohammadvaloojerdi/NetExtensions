@@ -15,7 +15,7 @@ namespace NetExtensions.PrimitiveExtensions.Tests.DateTimeExtensionsTests
         };
 
         [Theory, MemberData(nameof(Dates))]
-        public void Should_Be_Able_To_Count_Past_Hours_From_Now(DateTime birthDate, int expected)
+        public void Should_Be_Able_To_Count_Past_Hours_Between_NowDate_And_Another_Date(DateTime birthDate, int expected)
         {
             Clock.Adjust(new DateTime(2010, 01, 01, 10, 00, 00));
 

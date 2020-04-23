@@ -12,7 +12,7 @@ namespace NetExtensions.PrimitiveExtensions.Tests.StringExtensionsTests
         [InlineData(",1,2,3,", ',')]
         [InlineData(";123;", ';')]
         [InlineData("a&bc&", '&')]
-        public void Should_Return_True_On_Strings_With_Specific_Seperator(string input, char seperator)
+        public void Should_Return_True_On_Strings_That_Contains_Specific_Seperator(string input, char seperator)
         {
             var result = input.ContainsSeperator(seperator);
 

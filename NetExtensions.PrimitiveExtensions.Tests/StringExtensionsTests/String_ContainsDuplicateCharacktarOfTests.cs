@@ -9,8 +9,7 @@ namespace NetExtensions.PrimitiveExtensions.Tests.StringExtensionsTests
         [InlineData("abca", 'a')]
         [InlineData("1231", '1')]
         [InlineData("@#!@", '@')]
-        public void Should_Be_Able_To_Identify_Strings_With_Duplicate_Specific_Characktar(
-            string input, char characktar)
+        public void Should_Return_True_On_Strings_That_Contains_Duplicate_Characktar(string input, char characktar)
         {
             var result = input.ContainsDuplicateCharacktarOf(characktar);
 
@@ -21,8 +20,7 @@ namespace NetExtensions.PrimitiveExtensions.Tests.StringExtensionsTests
         [InlineData("abc", 'a')]
         [InlineData("123", '1')]
         [InlineData("@#!", '@')]
-        public void Should_Be_Able_To_Identify_Strings_Without_Duplicate_Specific_Characktar(
-            string input, char characktar)
+        public void Should_Return_False_On_Strings_Without_Duplicate_Characktar(string input, char characktar)
         {
             var result = input.ContainsDuplicateCharacktarOf(characktar);
 

@@ -8,7 +8,7 @@ namespace NetExtensions.PrimitiveExtensions.Tests.StringExtensionsTests
         [Theory]
         [InlineData("")]
         [InlineData(null)]
-        public void Should_Be_Able_To_Identify_Null_Or_Empty_Strings(string input)
+        public void Should_Return_True_On_Null_Or_Empty_Strings(string input)
         {
             var result = input.IsNullOrEmpty();
 
@@ -19,7 +19,7 @@ namespace NetExtensions.PrimitiveExtensions.Tests.StringExtensionsTests
         [InlineData(" ")]
         [InlineData("abc")]
         [InlineData("123")]
-        public void Should_Be_Able_To_Identify_Non_Null_Or_Empty_Strings(string input)
+        public void Should_Return_False_On_Non_Null_Or_Empty_Strings(string input)
         {
             var result = input.IsNullOrEmpty();
 

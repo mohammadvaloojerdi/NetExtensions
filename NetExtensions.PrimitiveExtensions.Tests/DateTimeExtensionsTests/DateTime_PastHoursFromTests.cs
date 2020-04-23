@@ -30,7 +30,7 @@ namespace NetExtensions.PrimitiveExtensions.Tests.DateTimeExtensionsTests
         };
 
         [Theory, MemberData(nameof(Dates))]
-        public void Should_Be_Able_To_Count_Past_Hours_From_Specific_Date(DateTime startDate, DateTime endDate, int expected)
+        public void Should_Be_Able_To_Count_Past_Hours_Between_Two_Dates(DateTime startDate, DateTime endDate, int expected)
         {
             var result = endDate.PastHoursFrom(startDate);
 

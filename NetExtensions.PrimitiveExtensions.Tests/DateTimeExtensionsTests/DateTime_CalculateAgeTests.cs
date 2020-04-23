@@ -16,7 +16,7 @@ namespace NetExtensions.PrimitiveExtensions.Tests.DateTimeExtensionsTests
         };
 
         [Theory, MemberData(nameof(BirthDates))]
-        public void Shoulkd_Be_Able_To_Calculate_Age_With_Counting_Leap_Years(DateTime birthDate, int expectedAge)
+        public void Should_Return_Age_With_Counting_Leap_Years(DateTime birthDate, int expectedAge)
         {
             Clock.Adjust(new DateTime(2010, 01, 01));
 

@@ -10,7 +10,7 @@ namespace NetExtensions.PrimitiveExtensions.Tests.StringExtensionsTests
         [InlineData("aBC")]
         [InlineData("AbC")]
         [InlineData("ABc")]
-        public void Should_Be_Able_To_Identify_Strings_With_Lowercase_Letter(string input)
+        public void Should_Return_True_On_Strings_That_Contains_Lowercase_Letter(string input)
         {
             var result = input.ContainsLowercaseLetter();
 
@@ -23,7 +23,7 @@ namespace NetExtensions.PrimitiveExtensions.Tests.StringExtensionsTests
         [InlineData("A")]
         [InlineData("ABC")]
         [InlineData("123")]
-        public void Should_Be_Able_To_Identify_Strings_Without_Lowercase_Letter(string input)
+        public void Should_Return_False_On_Strings_Without_Lowercase_Letter(string input)
         {
             var result = input.ContainsLowercaseLetter();
 

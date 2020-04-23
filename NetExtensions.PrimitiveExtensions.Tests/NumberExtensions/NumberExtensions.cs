@@ -55,7 +55,7 @@ namespace NetExtensions.PrimitiveExtensions.Tests.NumberExtensions
         [InlineData(0, false)]
         [InlineData(1, false)]
         [InlineData(2, false)]
-        public void IsNegative_Should_Be_Able_To_Identify_Positive_Numbers(object number, bool expected)
+        public void IsNegative_Should_Be_Able_To_Identify_Negative_Numbers(object number, bool expected)
         {
             var result = CastNumberToT(number).IsNegative();
 

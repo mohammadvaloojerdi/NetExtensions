@@ -1,6 +1,6 @@
-﻿using System;
+﻿using FluentAssertions;
+using System;
 using System.Collections.Generic;
-using FluentAssertions;
 using Xunit;
 
 namespace NetExtensions.PrimitiveExtensions.Tests.DateTimeExtensionsTests
@@ -15,7 +15,7 @@ namespace NetExtensions.PrimitiveExtensions.Tests.DateTimeExtensionsTests
         };
 
         [Theory, MemberData(nameof(TodayDates))]
-        public void Should_Be_Able_To_Identify_Today_Dates(DateTime dateTime)
+        public void Should_Return_True_On_Today_Dates(DateTime dateTime)
         {
             Clock.Adjust(new DateTime(2010, 10, 10, 10, 00, 00));
 
@@ -31,7 +31,7 @@ namespace NetExtensions.PrimitiveExtensions.Tests.DateTimeExtensionsTests
         };
 
         [Theory, MemberData(nameof(NonTodayDates))]
-        public void Should_Be_Able_To_Identify_Non_Today_Dates(DateTime dateTime)
+        public void Should_Return_False_On_Non_Today_Dates(DateTime dateTime)
         {
             Clock.Adjust(new DateTime(2010, 10, 10, 10, 00, 00));
 

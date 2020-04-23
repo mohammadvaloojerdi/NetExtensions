@@ -6,7 +6,7 @@ namespace NetExtensions.PrimitiveExtensions.Tests.StringExtensionsTests
     public class String_IsEmptyTests
     {
         [Fact]
-        public void Should_Be_Able_To_Identify_Empty_Strings()
+        public void Should_Return_True_On_Empty_Strings()
         {
             var input = "";
 
@@ -19,7 +19,7 @@ namespace NetExtensions.PrimitiveExtensions.Tests.StringExtensionsTests
         [InlineData(null)]
         [InlineData(" ")]
         [InlineData("abc")]
-        public void Should_Be_Able_To_Identify_Non_Empty_Strings(string input)
+        public void Should_Return_Empty_On_Non_Empty_Strings(string input)
         {
             var result = input.IsEmpty();
 

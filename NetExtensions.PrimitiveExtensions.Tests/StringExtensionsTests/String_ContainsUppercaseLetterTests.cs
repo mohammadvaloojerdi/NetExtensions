@@ -10,7 +10,7 @@ namespace NetExtensions.PrimitiveExtensions.Tests.StringExtensionsTests
         [InlineData("Abc")]
         [InlineData("aBc")]
         [InlineData("abC")]
-        public void Should_Be_Able_To_Identify_Strings_With_Uppercase_Letter(string input)
+        public void Should_Return_True_On_Strings_That_Contains_Uppercase_Letter(string input)
         {
             var result = input.ContainsUppercaseLetter();
 
@@ -23,7 +23,7 @@ namespace NetExtensions.PrimitiveExtensions.Tests.StringExtensionsTests
         [InlineData("a")]
         [InlineData("abc")]
         [InlineData("123")]
-        public void Should_Be_Able_To_Identify_Strings_Without_Uppercase_Letter(string input)
+        public void Should_Return_False_On_Strings_Without_Uppercase_Letter(string input)
         {
             var result = input.ContainsUppercaseLetter();
 

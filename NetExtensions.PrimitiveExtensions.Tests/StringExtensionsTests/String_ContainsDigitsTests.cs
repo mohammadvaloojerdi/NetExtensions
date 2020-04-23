@@ -10,7 +10,7 @@ namespace NetExtensions.PrimitiveExtensions.Tests.StringExtensionsTests
         [InlineData("a1b")]
         [InlineData("ab1")]
         [InlineData("passw0rd")]
-        public void Should_Be_Able_To_Identify_Strings_That_Contains_Digits(string input)
+        public void Should_Return_True_On_Strings_That_Contains_Digit(string input)
         {
             var result = input.ContainsDigit();
 
@@ -21,7 +21,7 @@ namespace NetExtensions.PrimitiveExtensions.Tests.StringExtensionsTests
         [InlineData("")]
         [InlineData(null)]
         [InlineData("abc")]
-        public void Should_Be_Able_To_Identify_Strings_Without_Digits(string input)
+        public void Should_Return_False_On_Strings_Without_Digit(string input)
         {
             var result = input.ContainsDigit();
 
