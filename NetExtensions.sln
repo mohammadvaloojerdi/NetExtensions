@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.645
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetExtensions.PrimitiveExtensions", "NetExtensions.PrimitiveExtensions\NetExtensions.PrimitiveExtensions.csproj", "{565099F6-EF2C-4B41-88FC-36C699ADFAE0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetExtensions.ExtensionMethods", "NetExtensions.ExtensionMethods\NetExtensions.ExtensionMethods.csproj", "{565099F6-EF2C-4B41-88FC-36C699ADFAE0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetExtensions.PrimitiveExtensions.Tests", "NetExtensions.PrimitiveExtensions.Tests\NetExtensions.PrimitiveExtensions.Tests.csproj", "{1378FC8A-32A0-4285-B2C2-0F500CEE156C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetExtensions.ExtensionMethods.Tests", "NetExtensions.ExtensionMethods.Tests\NetExtensions.ExtensionMethods.Tests.csproj", "{1378FC8A-32A0-4285-B2C2-0F500CEE156C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
