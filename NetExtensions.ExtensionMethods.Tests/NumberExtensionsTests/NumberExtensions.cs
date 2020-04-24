@@ -2,7 +2,7 @@
 using FluentAssertions;
 using Xunit;
 
-namespace NetExtensions.ExtensionMethods.Tests.NumberExtensions
+namespace NetExtensions.ExtensionMethods.Tests.NumberExtensionsTests
 {
     public abstract class NumberExtensions<T> where T : struct, IComparable, IComparable<T>, IConvertible
     {

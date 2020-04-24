@@ -4,7 +4,7 @@ using System.Reflection;
 using FluentAssertions;
 using Xunit;
 
-namespace NetExtensions.ExtensionMethods.Tests.AssemblyExtensions
+namespace NetExtensions.ExtensionMethods.Tests.AssemblyExtensionsTests
 {
     public class Assembly_GetClassessThatImplementsTests
     {

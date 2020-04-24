@@ -2,7 +2,7 @@
 using FluentAssertions;
 using Xunit;
 
-namespace NetExtensions.ExtensionMethods.Tests.ObjectExtensions
+namespace NetExtensions.ExtensionMethods.Tests.ObjectExtensionsTests
 {
     internal class Customer
     {
