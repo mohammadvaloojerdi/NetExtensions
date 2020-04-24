@@ -1,5 +1,5 @@
-﻿using System;
-using FluentAssertions;
+﻿using FluentAssertions;
+using System;
 using Xunit;
 
 namespace NetExtensions.ExtensionMethods.Tests.NumberExtensionsTests
@@ -58,6 +58,60 @@ namespace NetExtensions.ExtensionMethods.Tests.NumberExtensionsTests
         public void IsNegative_Should_Be_Able_To_Identify_Negative_Numbers(object number, bool expected)
         {
             var result = CastNumberToT(number).IsNegative();
+
+            result.Should().Be(expected);
+        }
+
+        [Theory]
+        [InlineData(1, 2, true)]
+        [InlineData(-3, -1, true)]
+        [InlineData(2, 1, false)]
+        [InlineData(-1, -3, false)]
+        [InlineData(1, 1, false)]
+        public void IsLessThan_Should_Be_Able_To_Compare_Numbers(int number, int numberToCompare, bool expected)
+        {
+            var result = number.IsLessThan(numberToCompare);
+
+            result.Should().Be(expected);
+        }
+
+        [Theory]
+        [InlineData(1, 2, true)]
+        [InlineData(-3, -1, true)]
+        [InlineData(2, 1, false)]
+        [InlineData(-1, -3, false)]
+        [InlineData(1, 1, true)]
+        [InlineData(-1, -1, true)]
+        public void IsLessThanOrEqualTo_Should_Be_Able_To_Compare_Numbers(int number, int numberToCompare, bool expected)
+        {
+            var result = number.IsLessThanOrEqualTo(numberToCompare);
+
+            result.Should().Be(expected);
+        }
+
+        [Theory]
+        [InlineData(2, 1, true)]
+        [InlineData(-1, -3, true)]
+        [InlineData(1, 2, false)]
+        [InlineData(-3, -1, false)]
+        [InlineData(1, 1, false)]
+        public void IsGreaterThan_Should_Be_Able_To_Compare_Numbers(int number, int numberToCompare, bool expected)
+        {
+            var result = number.IsGreaterThan(numberToCompare);
+
+            result.Should().Be(expected);
+        }
+
+        [Theory]
+        [InlineData(2, 1, true)]
+        [InlineData(-1, -3, true)]
+        [InlineData(1, 2, false)]
+        [InlineData(-3, -1, false)]
+        [InlineData(1, 1, true)]
+        [InlineData(-1, -1, true)]
+        public void IsGreaterThanOrEqualTo_Should_Be_Able_To_Compare_Numbers(int number, int numberToCompare, bool expected)
+        {
+            var result = number.IsGreaterThanOrEqualTo(numberToCompare);
 
             result.Should().Be(expected);
         }

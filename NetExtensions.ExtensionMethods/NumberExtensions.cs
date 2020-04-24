@@ -24,5 +24,25 @@ namespace NetExtensions.ExtensionMethods
         {
             return !number.IsPositive();
         }
+
+        public static bool IsLessThan<T>(this T number, T numberToCompare) where T : struct, IComparable, IComparable<T>, IConvertible
+        {
+            return Convert.ToInt32(number) < Convert.ToInt32(numberToCompare);
+        }
+
+        public static bool IsLessThanOrEqualTo<T>(this T number, T numberToCompare) where T : struct, IComparable, IComparable<T>, IConvertible
+        {
+            return Convert.ToInt32(number) <= Convert.ToInt32(numberToCompare);
+        }
+
+        public static bool IsGreaterThan<T>(this T number, T numberToCompare) where T : struct, IComparable, IComparable<T>, IConvertible
+        {
+            return Convert.ToInt32(number) > Convert.ToInt32(numberToCompare);
+        }
+
+        public static bool IsGreaterThanOrEqualTo<T>(this T number, T numberToCompare) where T : struct, IComparable, IComparable<T>, IConvertible
+        {
+            return Convert.ToInt32(number) >= Convert.ToInt32(numberToCompare);
+        }
     }
 }
