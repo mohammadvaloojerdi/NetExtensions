@@ -11,6 +11,11 @@ namespace NetExtensions.ExtensionMethods
             return attribute == null ? @enum.ToString() : attribute.Description;
         }
 
+        public static bool HasDescription(this Enum @enum)
+        {
+            return @enum.GetAttributeOfType<DescriptionAttribute>() != null;
+        }
+
         #region PrivateMethods
 
         private static T GetAttributeOfType<T>(this Enum enumVal) where T : Attribute
