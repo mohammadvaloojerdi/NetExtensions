@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 
 namespace NetExtensions.ExtensionMethods
 {
@@ -57,6 +58,11 @@ namespace NetExtensions.ExtensionMethods
         public static bool ContainsSeperator(this string input, char seperator)
         {
             return input.Contains(seperator) && input.Split(seperator).Any();
+        }
+
+        public static T ToEnum<T>(this string input)
+        {
+            return (T)Enum.Parse(typeof(T), input, true);
         }
     }
 }
