@@ -1,5 +1,5 @@
-﻿using System.Collections;
-using FluentAssertions;
+﻿using FluentAssertions;
+using System.Collections;
 using Xunit;
 
 namespace NetExtensions.ExtensionMethods.Tests.EnumerableTests
@@ -11,7 +11,7 @@ namespace NetExtensions.ExtensionMethods.Tests.EnumerableTests
         {
             var enumerable = CreateEmptyEnumerable();
 
-            enumerable.Should().BeEmpty();
+            enumerable.IsEmpty().Should().BeTrue();
         }
 
         [Fact]
@@ -19,7 +19,7 @@ namespace NetExtensions.ExtensionMethods.Tests.EnumerableTests
         {
             var enumerable = CreateNonEmptyEnumerable();
 
-            enumerable.Should().NotBeEmpty();
+            enumerable.IsEmpty().Should().BeFalse();
         }
 
         [Fact]
@@ -27,7 +27,7 @@ namespace NetExtensions.ExtensionMethods.Tests.EnumerableTests
         {
             var enumerable = CreateNonEmptyEnumerable();
 
-            enumerable.Should().NotBeEmpty();
+            enumerable.IsNotEmpty().Should().BeTrue();
         }
 
         [Fact]
@@ -35,7 +35,7 @@ namespace NetExtensions.ExtensionMethods.Tests.EnumerableTests
         {
             var enumerable = CreateEmptyEnumerable();
 
-            enumerable.Should().BeEmpty();
+            enumerable.IsNotEmpty().Should().BeFalse();
         }
 
         protected abstract T CreateEmptyEnumerable();
